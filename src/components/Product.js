@@ -2,7 +2,7 @@ const Product=()=>{
     return(
     <>
     {/* card */}
-    <div class="card" style={{"width":" 18rem"}}>
+    <div class="card m-4" style={{"width":" 18rem"}}>
         {/* image */}
     <img src="https://random.imagecdn.app/500/350" class="card-img-top" alt="..."/>
     {/* end image */}
