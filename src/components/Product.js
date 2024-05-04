@@ -8,7 +8,7 @@ const Product=()=>{
     {/* end image */}
     {/* body */}
     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
+    <p class="card-title">Category :tech </p>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     {/* price */}
     <h5 class="card-title text-end">100$</h5>
