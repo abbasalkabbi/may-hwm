@@ -1,0 +1,9 @@
+html{
+    overflow-x: hidden;
+}
+
+.home{
+    width: 100vw;
+    height: 100vh;
+    max-height: fit-content;
+}
