@@ -9,19 +9,26 @@ return(
                 <div class="card shadow-2-strong" >
                     {/* card body */}
                     <div class="card-body p-5 text-center">
-                        <h3 class="mb-5">Sign in</h3>
+                        <h3 class="mb-5  fw-bolder">Sign Up</h3>
                         {/* Full Name */}
-                        <div class="mb-3 d-flex flex-column align-items-start">
-                            <label for="name" class="form-label">Full Name</label>
+                        <div class="d-input mb-3 d-flex flex-column align-items-start">
+                            
                             <input type="text" class="form-control" id="name" />
+                            <label for="name" class="form-label">Full Name</label>
                         </div>
                         {/* Full Name end */}
                         {/* email */}
-                        <div class="mb-3 d-flex flex-column align-items-start">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <div class="d-input mb-3 d-flex flex-column align-items-start">
                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
                         </div>
                         {/* email end */}
+                         {/* password */}
+                        <div class="d-input mb-3 d-flex flex-column align-items-start">
+                            <input type="text" class="form-control" id="password" />
+                            <label for="password" class="form-label">Password</label>
+                        </div>
+                        {/* password end */}
                     </div>
                     {/* card body end */}
                 </div>

@@ -7,3 +7,48 @@ html{
     height: 100vh;
     max-height: fit-content;
 }
+/*  */
+.d-input{
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    
+}
+.d-input label{
+    color: #b1bbc4;
+    font-size: 16px;
+    position: absolute;
+    font-weight: normal;
+    left: 5px;
+    bottom: 1px;
+    transition: 0.1s ease all;
+
+}
+.d-input label::after{
+    content: '*';
+    color: #dc3545;
+    padding-left: 2px;
+    font-size: 0.8em;
+}
+.d-input input{
+    border: none;
+    border-bottom: 2px solid #ced4da;
+    border-radius: 0px;
+    background-color: transparent;
+    padding-left: 5px;
+    box-shadow: none;
+}
+.d-input input:focus{
+    border-bottom-color: #007bff;
+    color: #000;
+    box-shadow: none;
+}
+.d-input input:focus ~ label{
+    top: unset;
+    bottom: 100%;
+    bottom: calc(100% - 16px);
+    font-size: 14px;
+    color: #007bff;
+    font-weight: 500;
+    
+}
