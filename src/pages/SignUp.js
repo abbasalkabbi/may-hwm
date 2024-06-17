@@ -29,6 +29,16 @@ return(
                             <label for="password" class="form-label">Password</label>
                         </div>
                         {/* password end */}
+                        <div className="sign-select">
+                        <select class=" form-select" aria-label="Default select example">
+                        <option value="" selected/>
+                        <option value='Baghdad' >Baghdad</option>
+                        <option value='Baghdad' >rablie</option>
+                        <option value='Baghdad' >bahera</option>
+                        </select>
+                        <label  class="form-label">city</label>
+                        </div>
+                        
                     </div>
                     {/* card body end */}
                 </div>
