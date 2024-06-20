@@ -46,6 +46,10 @@ return(
                             <label  class="form-label">city</label>
                         </div>
                         {/* citu end */}
+                        <button className="btn  btn-primary btn-lg"> Sign Up</button>
+                        <div class="text-center mt-1">
+                        <p>you have account? <a href="#!">Sign In </a></p>
+                        </div>
                     </div>
                     {/* card body end */}
                 </div>
