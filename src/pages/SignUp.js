@@ -23,22 +23,29 @@ return(
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
                         </div>
                         {/* email end */}
+                        {/* Phone */}
+                        <div class="d-input mb-3 d-flex flex-column align-items-start">
+                            <input type="tel" class="form-control" id="phone"  />
+                            <label for="phone" class="form-label">Phone</label>
+                        </div>
+                        {/* Phone end */}
                          {/* password */}
                         <div class="d-input mb-3 d-flex flex-column align-items-start">
                             <input type="text" class="form-control" id="password" />
                             <label for="password" class="form-label">Password</label>
                         </div>
                         {/* password end */}
+                        {/* city */}
                         <div className="sign-select">
-                        <select class=" form-select" aria-label="Default select example">
-                        <option value="" selected/>
-                        <option value='Baghdad' >Baghdad</option>
-                        <option value='Baghdad' >rablie</option>
-                        <option value='Baghdad' >bahera</option>
-                        </select>
-                        <label  class="form-label">city</label>
+                            <select class=" form-select" aria-label="Default select example">
+                                <option value="" selected/>
+                                <option value='Baghdad' >Baghdad</option>
+                                <option value='Baghdad' >rablie</option>
+                                <option value='Baghdad' >bahera</option>
+                            </select>
+                            <label  class="form-label">city</label>
                         </div>
-                        
+                        {/* citu end */}
                     </div>
                     {/* card body end */}
                 </div>
