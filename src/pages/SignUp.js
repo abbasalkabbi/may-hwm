@@ -13,7 +13,7 @@ return(
                         {/* Full Name */}
                         <div class="d-input mb-3 d-flex flex-column align-items-start">
                             
-                            <input type="text" class="form-control" id="name" />
+                            <input type="text" class="form-control" id="name" required/>
                             <label for="name" class="form-label">Full Name</label>
                         </div>
                         {/* Full Name end */}
@@ -47,7 +47,7 @@ return(
                         </div>
                         {/* citu end */}
                         <button className="btn  btn-primary btn-lg"> Sign Up</button>
-                        <div class="text-center mt-1">
+                        <div class="text-center mt-2">
                         <p>you have account? <a href="#!">Sign In </a></p>
                         </div>
                     </div>
