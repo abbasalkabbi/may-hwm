@@ -35,8 +35,5 @@ $run->Set((object) array(
     "Password"=>'',
     "Name"=>'may-hwm',
 ));
-$run->connect(); 
-$data=mysqli_query($run->get() ,'SELECT * FROM `users` ');
-var_dump( mysqli_fetch_all($data,MYSQLI_ASSOC));
-// var_dump( $run);
+$db =$run->connect(); 
 ?>
