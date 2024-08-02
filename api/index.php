@@ -8,4 +8,5 @@ $us->create($user=(object) array(
     "email"=>'root',
     "password"=>'password',
 ))
+
 ?>
