@@ -2,11 +2,11 @@ import React from "react";
 import {useState } from "react"
 import axios from 'axios';
 const SignUp= ()=>{
-    const [Name,SetName]=useState()
-    const [Email,SetEmail]=useState()
-    const [Phone,SetPhone]=useState()
-    const [Password,SetPassword]=useState()
-    const [City,SetCity]=useState()
+    const [Name,SetName]=useState('')
+    const [Email,SetEmail]=useState('')
+    const [Phone,SetPhone]=useState('')
+    const [Password,SetPassword]=useState('')
+    const [City,SetCity]=useState('')
     function handleFormSubmit(e){
         e.preventDefault();
         let register_data={

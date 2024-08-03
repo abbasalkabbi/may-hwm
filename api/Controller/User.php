@@ -31,20 +31,20 @@ if(isset($_GET['q'])){
             if(!empty($name) && !empty($email) && !empty($password) ){
                   // check name
                     if(strlen($name) <7){
-                        echo json_encode(['status'=>false,"message" => "($name) is  Short"]);
+                        echo json_encode(['status'=>false,'err'=>1,"message" => "($name) is  Short"]);
                     }else{
                             // email 
                             if(filter_var($email,FILTER_VALIDATE_EMAIL)){
                                 $email_check=mysqli_query($db,"SELECT * FROM users WHERE email = '{$email}'");
                                 if(mysqli_num_rows($email_check) >0){
                                         // if email is not new
-                                    echo json_encode(['status'=>false,"message" => "($email) is  login"]);
+                                    echo json_encode(['status'=>false,'err'=>2,"message" => "($email) is  login"]);
                         }else{
                             //  email is not login
                             // check password
                             if(strlen($password) <7){
                                 //
-                                echo json_encode(['status'=>false,"message" => "password is  Short"]);
+                                echo json_encode(['status'=>false,'err'=>3,"message" => "password is  Short"]);
                             }else{
                                 // password more then 7 leters
                                 //check avatar 
@@ -64,19 +64,17 @@ if(isset($_GET['q'])){
                             }
                         }
                                 }else{
-                                    echo json_encode(['status'=>false,"message" => "email is not cerrtect"]);
+                                    echo json_encode(['status'=>false,'err'=>2,"message" => "email is not cerrtect"]);
                                 }
 
                         }
             }else{
                 if(empty($name)){
-                    echo json_encode(['status'=>false,"message" => "Name is  empty"]);
-                }
-                if(empty($email)){
-                    echo json_encode(['status'=>false,"message" => "email is  empty"]);
-                }
-                if(empty($password)){
-                    echo json_encode(['status'=>false,"message" => "password is  empty"]);
+                    echo json_encode(['status'=>false,'err'=>1,"message" => "Name is  empty"]);
+                }elseif(empty($email)){
+                    echo json_encode(['status'=>false,'err'=>2,"message" => "email is  empty"]);
+                }elseif(empty($password)){
+                    echo json_encode(['status'=>false,'err'=>3,"message" => "password is  empty"]);
                 }
             }
             break;
