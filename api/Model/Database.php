@@ -20,7 +20,6 @@ class db {
         if (!$conn) {
             die("Connection failed: " . mysqli_connect_error());
         }
-        echo "Connected successfully";
         return $this->DATABASE=$conn;
     }
     public function get(){

@@ -53,6 +53,22 @@ html{
     font-weight: 500;
     
 }
+/* error */
+.error  label {
+    color: #b00020;
+
+}
+.error input{
+    border-bottom: 2px solid #b00020;
+}
+.error input:focus {
+    border-bottom-color: #b00020;
+}
+
+.error input:focus ~ label{
+    color: #b00020;
+}
+/* end error */
 .sign-select  {
     position: relative;
     margin-top: 50px;
