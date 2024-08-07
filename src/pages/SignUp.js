@@ -3,6 +3,7 @@ import {useState } from "react"
 import axios from 'axios';
 const SignUp= ()=>{
     const [err,SetErr]=useState(0)
+    const [errinfo,SetErrinfo]=useState('')
     const [Name,SetName]=useState('')
     const [Email,SetEmail]=useState('')
     const [Phone,SetPhone]=useState('')
@@ -27,8 +28,19 @@ const SignUp= ()=>{
                 if(result.data.status ==false){
                     console.log(result.data.err)
                     SetErr(result.data.err)
+                    SetErrinfo(result.data.message)
                 }
             })
+    }
+    function Show_Error(){
+        if(err !=0){
+            return <> <div class="alert alert-danger d-flex align-items-center" role="alert">
+                        <div>
+                            {errinfo}
+                        </div>
+                    </div>
+            </>
+        }
     }
 return(
     <>
@@ -41,6 +53,7 @@ return(
                     {/* card body */}
                     <div class="card-body p-5 text-center">
                         <h3 class="mb-5  fw-bolder">Sign Up</h3>
+                        {Show_Error()}
                         {/* Full Name */}
                         <div className={'d-input mb-3 d-flex flex-column align-items-start ' + (err==1?'error':'')}>
                             
