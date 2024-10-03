@@ -63,7 +63,7 @@ return(
                         {/* Full Name end */}
                         {/* email */}
                         <div className={'d-input mb-3 d-flex flex-column align-items-start ' + (err==2?'error':'')}>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e)=>SetEmail(e.target.value)}/>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  onChange={(e)=>SetEmail(e.target.value)}/>
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
                         </div>
                         {/* email end */}
