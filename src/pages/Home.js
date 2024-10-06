@@ -8,6 +8,7 @@ const Home = () => {
         <h1 className="fw-bold fs-1 text-capitalize text-center p-4">
             may-hwm
         </h1>
+        {/* search */}
         <div className="search">
             <div class="d-search mb-3 d-flex flex-column align-items-start">
                 <input type="text" class="form-control" id="input_s" />
@@ -15,6 +16,15 @@ const Home = () => {
             </div>
             
         </div>
+        {/* search End */}
+        {/* Category */}
+        <div className="category">
+            <p> Home </p>
+            <p> tech </p>
+            <p> mobile </p>
+            <p> house </p>
+        </div>
+        {/* Category End  */}
     </div>
     {/* hero End  */}
     {/* show  Product*/}
