@@ -163,6 +163,14 @@ html{
     font-weight: 500;
     
 }
+.d-search button{
+    position: absolute;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+}
 /* category */
 .category{
     margin: 20px auto;
