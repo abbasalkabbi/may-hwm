@@ -8,7 +8,7 @@ const SignUp= ()=>{
     const [Email,SetEmail]=useState('')
     const [Phone,SetPhone]=useState('')
     const [Password,SetPassword]=useState('')
-    const [City,SetCity]=useState('')
+    const [Avatar,SetAvatar]=useState('')
     function handleFormSubmit(e){
         e.preventDefault();
         let register_data={
@@ -31,6 +31,22 @@ const SignUp= ()=>{
                     SetErrinfo(result.data.message)
                 }
             })
+    }
+    function  avatar_upload(e){
+        let files = e.target.files;//get file
+        // check is img
+        let extension=['jpg','jpeg','png'];  //acceptable file types
+        let file_type=files[0].type.split('/').pop().toLowerCase(),
+            isSuccess = extension.indexOf(file_type) > -1;  //is extension in acceptable types
+            if(isSuccess){
+                // if is img
+                let fileReader = new FileReader();
+                fileReader.readAsDataURL(files[0]);
+                fileReader.onload = (event) => {
+                    SetAvatar(event.target.result)
+                    console.log(files[0])
+                }
+    }
     }
     function Show_Error(){
         if(err !=0){
@@ -79,17 +95,23 @@ return(
                             <label for="password" class="form-label">Password {Password}</label>
                         </div>
                         {/* password end */}
-                        {/* city */}
-                        <div className="sign-select">
-                            <select class=" form-select" aria-label="Default select example" onChange={(e)=>SetCity(e.target.value)} >
-                                <option value="" selected/>
-                                <option value='Baghdad' >Baghdad</option>
-                                <option value='Baghdad' >rablie</option>
-                                <option value='bahera' >bahera</option>
-                            </select>
-                            <label  class="form-label">city</label>
+                        {/* <!--Avatar--> */}
+                        <div className="d-flex justify-content-between align-items-center">
+                            <div class="d-flex justify-content-center">
+                                <div data-mdb-ripple-init class="btn btn-primary btn-rounded">
+                                    <label class="form-label text-white m-1" for="customFile2">Choose file</label>
+                                    <input type="file" class="form-control d-none" id="customFile2" onChange={e => avatar_upload(e)} />
+                                </div>
+                            </div>
+                            {Avatar? <div class="d-flex justify-content-center mb-4">
+                                <img id="selectedAvatar" src={Avatar}
+                                class="rounded-circle" style={{"width": "100px", "height": "100px", "object-fit": "cover"}} alt="example placeholder" />
+                            </div>
+                            
+                            :''
+                            }
                         </div>
-                        {/* citu end */}
+                        {/* end Avatar */}
                         <button className="btn  btn-primary btn-lg" onClick={e => handleFormSubmit(e)}> Sign Up</button>
                         <div class="text-center mt-2">
                         <p>you have account? <a href="#!">Sign In </a></p>
