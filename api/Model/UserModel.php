@@ -6,12 +6,14 @@ class User{
     private $id;
     private $password;
     private $email;
+    private $avatar;
     public function create($user,$isImage=false){
         $this->Name=$user->name;
         $this->password=$user->password;
         $this->email=$user->email;
+        $this->avatar=$user->avatar;
         if($isImage == false){
-            $SetUser=mysqli_query($this->db,"INSERT INTO `users` (`name`,`email`,`password`) VALUES ('$this->Name','$this->email','$this->password')");
+            $SetUser=mysqli_query($this->db,"INSERT INTO `users` (`name`,`email`,`password`,`image`) VALUES ('$this->Name','$this->email','$this->password','$this->avatar')");
         }
         return true;
     }

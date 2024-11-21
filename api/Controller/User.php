@@ -5,7 +5,7 @@ require '../Model/Database.php';
 require '../Model/UserModel.php';
 $rest_json = file_get_contents("php://input");
 $_POST = json_decode($rest_json, true);
-
+$DIR = "../avatar/";
  //  img upload
 function upload_img($DIR){
     // if there image
@@ -26,6 +26,7 @@ if(isset($_GET['q'])){
             $name=$_POST['name'];
             $email=$_POST['email'];
             $password=$_POST['password'];
+            $avatar=$_POST['avatar'];
             // $avatar=$_POST['avatar'];
              // if Not empty
             if(!empty($name) && !empty($email) && !empty($password) ){
@@ -58,6 +59,19 @@ if(isset($_GET['q'])){
                                                 "email"=>$email,
                                                 "password"=>$password,
                                                 "avatar"=>'avatar.png',
+                                                )
+                                        );
+                                }
+                                if(!empty($avatar)){
+                                    $image=upload_img($DIR);
+                                    $user=new User();
+                                    $user->db=$db;
+                                    $user->create(
+                                        (object) array(
+                                                "name"=>$name,
+                                                "email"=>$email,
+                                                "password"=>$password,
+                                                "avatar"=>$image,
                                                 )
                                         );
                                 }

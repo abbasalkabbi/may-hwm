@@ -15,6 +15,7 @@ const SignUp= ()=>{
             name: Name,
             email: Email,
             password:Password,
+            avatar:Avatar
         }
         console.log(register_data)
         axios({
@@ -46,6 +47,10 @@ const SignUp= ()=>{
                     SetAvatar(event.target.result)
                     console.log(files[0])
                 }
+                
+    }else{
+        SetErr(4)
+        SetErrinfo('Its not image')
     }
     }
     function Show_Error(){
